@@ -47,7 +47,7 @@ namespace RPG2D
         
         public Rect GetRect(string name)
         {
-            return _rects[0];
+			return _rects[_textureIDs[name]];
         }
 
         public void Pack()

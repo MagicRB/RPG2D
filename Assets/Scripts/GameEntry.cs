@@ -16,7 +16,7 @@ namespace RPG2D {
 			
 			TextureManager.PackAllTextures();
 
-			Registers.BlockRegister.GetRegisteredBlockInstance("TestMod-Wall");
+			API.World.SpawnBlock (new Vector2Int (0, 0), Registers.BlockRegister.GetRegisteredBlockType ("TestMod-Wall"));
 		}
 		
 		// Update is called once per frame
