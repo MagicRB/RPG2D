@@ -12,9 +12,14 @@ namespace RPG2D.Managers
 {
     public static class ModManager
     {
-        private static Dictionary<string, RPG2D.BaseClasses.Mod> ModInstances = new Dictionary<string, RPG2D.BaseClasses.Mod>();
-        private static Dictionary<string, Assembly> ModAssemblies = new Dictionary<string, Assembly>();
+        private static Dictionary<string, RPG2D.BaseClasses.Mod> _modInstances = new Dictionary<string, RPG2D.BaseClasses.Mod>();
+        private static Dictionary<string, Assembly> _modAssemblies = new Dictionary<string, Assembly>();
 
+        public static Dictionary<string, RPG2D.BaseClasses.Mod> ModInstances
+        {
+            get { return _modInstances; }
+        }
+        
         private static Assembly CompileCSharpFile(string path, string outputFile, List<string> dependencies)
         {
             var provider = new CSharpCodeProvider();
@@ -117,12 +122,12 @@ namespace RPG2D.Managers
                         }
                     }
 
-                    ModAssemblies[internalModName] = CompileCSharpFile(Application.persistentDataPath + "/Mods/" + internalModName + "/" + path, Application.persistentDataPath + "/Mods/" + internalModName + "/" + outputFilePath, dependencies);
+                    _modAssemblies[internalModName] = CompileCSharpFile(Application.persistentDataPath + "/Mods/" + internalModName + "/" + path, Application.persistentDataPath + "/Mods/" + internalModName + "/" + outputFilePath, dependencies);
                 }
             }
 
 
-            foreach (var modAssembly in ModAssemblies)
+            foreach (var modAssembly in _modAssemblies)
             {
                 var types = modAssembly.Value.GetExportedTypes();
                 foreach (var type in types)
@@ -132,7 +137,7 @@ namespace RPG2D.Managers
                         if (type.FullName.Contains("___MOD___"))
                         {
                             var mod = Activator.CreateInstance(type) as RPG2D.BaseClasses.Mod;
-                            ModInstances[internalModName] = mod;
+                            _modInstances[internalModName] = mod;
                         }
                     }
                 }
@@ -186,22 +191,22 @@ namespace RPG2D.Managers
                 }
             }
 
-            foreach (var modInstance in ModInstances)
+            foreach (var modInstance in _modInstances)
             {
                 modInstance.Value.PreInit();
             }
 
-            foreach (var modInstance in ModInstances)
+            foreach (var modInstance in _modInstances)
             {
                 modInstance.Value.Init();
             }
 
-            foreach (var modInstance in ModInstances)
+            foreach (var modInstance in _modInstances)
             {
                 modInstance.Value.PostInit();
             }
 
-            foreach (var modInstance in ModInstances)
+            foreach (var modInstance in _modInstances)
             {
                 modInstance.Value.LoadContent();
             }

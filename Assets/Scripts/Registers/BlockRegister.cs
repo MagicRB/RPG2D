@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using RPG2D.BaseClasses;
 
 namespace RPG2D.Registers
@@ -8,6 +9,11 @@ namespace RPG2D.Registers
     {
         private static Dictionary<string, System.Type> _blockDictionary = new Dictionary<string, Type>();
 
+        public static bool IsRegitered(string name)
+        {
+            return _blockDictionary.ContainsKey(name);
+        }
+        
         public static Dictionary<string, Type> BlockDictionary
         {
             get { return _blockDictionary; }

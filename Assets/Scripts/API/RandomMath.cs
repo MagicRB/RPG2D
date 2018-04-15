@@ -4,6 +4,11 @@ namespace RPG2D.API
 {
     public static class RandomMath
     {
+        /// <summary>
+        /// Calculates the next power of two, the power of two is always bigger then n.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns>Next power of two</returns>
         public static int NextPowerOf2(int n)
         {
             if (n > 0)
