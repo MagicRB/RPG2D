@@ -2,6 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>4</LangVersion>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -58,6 +59,7 @@
     <Compile Include="Assets\Scripts\API\RandomMath.cs" />
     <Compile Include="Assets\Scripts\API\World.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\Block.cs" />
+    <Compile Include="Assets\Scripts\BaseClasses\Entity.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\Mod.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\Player.cs" />
     <Compile Include="Assets\Scripts\Chunk.cs" />
@@ -67,10 +69,13 @@
     <Compile Include="Assets\Scripts\Managers\SaveManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TextureManager.cs" />
     <Compile Include="Assets\Scripts\Registers\BlockRegister.cs" />
+    <Compile Include="Assets\Scripts\Registers\EntityRegister.cs" />
     <Compile Include="Assets\Scripts\Registers\PlayerRegister.cs" />
     <Compile Include="Assets\Scripts\SaveGame.cs" />
     <Compile Include="Assets\Scripts\SerializationSurrogates\Vector2IntSerializationSurrogate.cs" />
     <Compile Include="Assets\Scripts\SerializationSurrogates\Vector2SerializationSurrogate.cs" />
+    <Compile Include="Assets\Scripts\SerializationSurrogates\Vector3IntSerializationSurrogate.cs" />
+    <Compile Include="Assets\Scripts\SerializationSurrogates\Vector3SerializationSurrogate.cs" />
     <Compile Include="Assets\Scripts\TextureAtlas.cs" />
     <Reference Include="Facebook.Unity.Settings">
       <HintPath>F:/Projects/Unity/RPG2D/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
@@ -94,7 +99,7 @@
       <HintPath>G:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>F:\Projects\Unity\RPG2D\Library\resharper-unity-libs\nunit3.5.0\nunit.framework.dll</HintPath>
+      <HintPath>G:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>G:/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
@@ -146,6 +151,9 @@
     </Reference>
     <Reference Include="mcs">
       <HintPath>F:/Projects/Unity/RPG2D/Assets/Plugins/mcs.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
+      <HintPath>F:/Projects/Unity/RPG2D/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/Users/Magic_RB/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>

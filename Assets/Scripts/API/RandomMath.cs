@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace RPG2D.API
 {
@@ -19,7 +20,7 @@ namespace RPG2D.API
             {
                 return (int)Math.Pow(2, Math.Ceiling(Math.Log(n) / Math.Log(2))) * -1;
             }
-
+            
             return 0;
         }
     }

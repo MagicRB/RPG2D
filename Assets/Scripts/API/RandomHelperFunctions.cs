@@ -24,8 +24,6 @@ namespace RPG2D.API
 
                 index++;
             }
-
-            Debug.Log(result);
             return result;
         }
     }

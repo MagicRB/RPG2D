@@ -47,9 +47,13 @@ namespace RPG2D.Managers
             SurrogateSelector surrogateSelector = new SurrogateSelector();
             SerializationSurrogates.Vector2IntSerializationSurrogate vector2I = new SerializationSurrogates.Vector2IntSerializationSurrogate();
             SerializationSurrogates.Vector2SerializationSurrogate vector2 = new SerializationSurrogates.Vector2SerializationSurrogate();
+            SerializationSurrogates.Vector3SerializationSurrogate vector3 = new SerializationSurrogates.Vector3SerializationSurrogate();
+            SerializationSurrogates.Vector3IntSerializationSurrogate vector3I = new SerializationSurrogates.Vector3IntSerializationSurrogate();
  
             surrogateSelector.AddSurrogate(typeof(Vector2Int),new StreamingContext(StreamingContextStates.All),vector2I);
             surrogateSelector.AddSurrogate(typeof(Vector2),new StreamingContext(StreamingContextStates.All),vector2);
+            surrogateSelector.AddSurrogate(typeof(Vector3Int),new StreamingContext(StreamingContextStates.All),vector3I);
+            surrogateSelector.AddSurrogate(typeof(Vector3),new StreamingContext(StreamingContextStates.All),vector3);
             
             XmlDocument xml = new XmlDocument();
             
@@ -104,9 +108,13 @@ namespace RPG2D.Managers
             SurrogateSelector surrogateSelector = new SurrogateSelector();
             SerializationSurrogates.Vector2IntSerializationSurrogate vector2I = new SerializationSurrogates.Vector2IntSerializationSurrogate();
             SerializationSurrogates.Vector2SerializationSurrogate vector2 = new SerializationSurrogates.Vector2SerializationSurrogate();
+            SerializationSurrogates.Vector3SerializationSurrogate vector3 = new SerializationSurrogates.Vector3SerializationSurrogate();
+            SerializationSurrogates.Vector3IntSerializationSurrogate vector3I = new SerializationSurrogates.Vector3IntSerializationSurrogate();
  
             surrogateSelector.AddSurrogate(typeof(Vector2Int),new StreamingContext(StreamingContextStates.All),vector2I);
             surrogateSelector.AddSurrogate(typeof(Vector2),new StreamingContext(StreamingContextStates.All),vector2);
+            surrogateSelector.AddSurrogate(typeof(Vector3Int),new StreamingContext(StreamingContextStates.All),vector3I);
+            surrogateSelector.AddSurrogate(typeof(Vector3),new StreamingContext(StreamingContextStates.All),vector3);
             
             XmlDocument xml = new XmlDocument();
             XmlElement world = xml.CreateElement("World");

@@ -1,0 +1,148 @@
+\hypertarget{class_r_p_g2_d_1_1_a_p_i_1_1_world}{}\section{R\+P\+G2\+D.\+A\+P\+I.\+World Class Reference}
+\label{class_r_p_g2_d_1_1_a_p_i_1_1_world}\index{R\+P\+G2\+D.\+A\+P\+I.\+World@{R\+P\+G2\+D.\+A\+P\+I.\+World}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Vector2\+Int \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world_ae8afbfcfaaecd14e30cf343404c4336d}{Position\+To\+Chunk}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Converts \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world}{World}} space position to chunk position, so like the chunk number. \end{DoxyCompactList}\item 
+static Vector2\+Int \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world_a46adadcf2bd6165b14a803f7494c1219}{Position\+To\+Position\+In\+Chunk}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Converts \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world}{World}} space position to the local position inside the chunk. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world_a487e129cc74d77b2e003d197bb50a2a8}{Add\+Chunk}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Adds a new chunk. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world_a3244e543b87453f50bb93a9d869caa83}{Spawn\+Block}} (Vector2\+Int position, System.\+Type block\+Type)
+\begin{DoxyCompactList}\small\item\em Spawns a block at the position. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world_a36e060049f16cc356f30afded645521c}{Spawn\+Block}} (Vector2\+Int position, \mbox{\hyperlink{class_r_p_g2_d_1_1_base_classes_1_1_block}{Base\+Classes.\+Block}} block)
+\begin{DoxyCompactList}\small\item\em Spawns a block at the position. (Creates a new instance) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_r_p_g2_d_1_1_base_classes_1_1_block}{Base\+Classes.\+Block}} \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world_ab5146954658368ff3402fa08f9a556e7}{Get\+Block}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Gets the block instance at the specified position \end{DoxyCompactList}\item 
+static System.\+Type \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world_a2e698d1e8265a1040e7713d40aeefb69}{Get\+Block\+Type}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Gets the block type at the specified position \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_p_g2_d_1_1_a_p_i_1_1_world_a487e129cc74d77b2e003d197bb50a2a8}\label{class_r_p_g2_d_1_1_a_p_i_1_1_world_a487e129cc74d77b2e003d197bb50a2a8}} 
+\index{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}!Add\+Chunk@{Add\+Chunk}}
+\index{Add\+Chunk@{Add\+Chunk}!R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}}
+\subsubsection{\texorpdfstring{Add\+Chunk()}{AddChunk()}}
+{\footnotesize\ttfamily static void R\+P\+G2\+D.\+A\+P\+I.\+World.\+Add\+Chunk (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Adds a new chunk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_r_p_g2_d_1_1_a_p_i_1_1_world_ab5146954658368ff3402fa08f9a556e7}\label{class_r_p_g2_d_1_1_a_p_i_1_1_world_ab5146954658368ff3402fa08f9a556e7}} 
+\index{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}!Get\+Block@{Get\+Block}}
+\index{Get\+Block@{Get\+Block}!R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}}
+\subsubsection{\texorpdfstring{Get\+Block()}{GetBlock()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_r_p_g2_d_1_1_base_classes_1_1_block}{Base\+Classes.\+Block}} R\+P\+G2\+D.\+A\+P\+I.\+World.\+Get\+Block (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the block instance at the specified position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Block instance
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_p_g2_d_1_1_a_p_i_1_1_world_a2e698d1e8265a1040e7713d40aeefb69}\label{class_r_p_g2_d_1_1_a_p_i_1_1_world_a2e698d1e8265a1040e7713d40aeefb69}} 
+\index{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}!Get\+Block\+Type@{Get\+Block\+Type}}
+\index{Get\+Block\+Type@{Get\+Block\+Type}!R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}}
+\subsubsection{\texorpdfstring{Get\+Block\+Type()}{GetBlockType()}}
+{\footnotesize\ttfamily static System.\+Type R\+P\+G2\+D.\+A\+P\+I.\+World.\+Get\+Block\+Type (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the block type at the specified position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Block type
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_p_g2_d_1_1_a_p_i_1_1_world_ae8afbfcfaaecd14e30cf343404c4336d}\label{class_r_p_g2_d_1_1_a_p_i_1_1_world_ae8afbfcfaaecd14e30cf343404c4336d}} 
+\index{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}!Position\+To\+Chunk@{Position\+To\+Chunk}}
+\index{Position\+To\+Chunk@{Position\+To\+Chunk}!R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}}
+\subsubsection{\texorpdfstring{Position\+To\+Chunk()}{PositionToChunk()}}
+{\footnotesize\ttfamily static Vector2\+Int R\+P\+G2\+D.\+A\+P\+I.\+World.\+Position\+To\+Chunk (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world}{World}} space position to chunk position, so like the chunk number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the chunk position.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_p_g2_d_1_1_a_p_i_1_1_world_a46adadcf2bd6165b14a803f7494c1219}\label{class_r_p_g2_d_1_1_a_p_i_1_1_world_a46adadcf2bd6165b14a803f7494c1219}} 
+\index{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}!Position\+To\+Position\+In\+Chunk@{Position\+To\+Position\+In\+Chunk}}
+\index{Position\+To\+Position\+In\+Chunk@{Position\+To\+Position\+In\+Chunk}!R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}}
+\subsubsection{\texorpdfstring{Position\+To\+Position\+In\+Chunk()}{PositionToPositionInChunk()}}
+{\footnotesize\ttfamily static Vector2\+Int R\+P\+G2\+D.\+A\+P\+I.\+World.\+Position\+To\+Position\+In\+Chunk (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts \mbox{\hyperlink{class_r_p_g2_d_1_1_a_p_i_1_1_world}{World}} space position to the local position inside the chunk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Position inside the chunk.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_p_g2_d_1_1_a_p_i_1_1_world_a3244e543b87453f50bb93a9d869caa83}\label{class_r_p_g2_d_1_1_a_p_i_1_1_world_a3244e543b87453f50bb93a9d869caa83}} 
+\index{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}!Spawn\+Block@{Spawn\+Block}}
+\index{Spawn\+Block@{Spawn\+Block}!R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}}
+\subsubsection{\texorpdfstring{Spawn\+Block()}{SpawnBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void R\+P\+G2\+D.\+A\+P\+I.\+World.\+Spawn\+Block (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position,  }\item[{System.\+Type}]{block\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Spawns a block at the position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em block\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_r_p_g2_d_1_1_a_p_i_1_1_world_a36e060049f16cc356f30afded645521c}\label{class_r_p_g2_d_1_1_a_p_i_1_1_world_a36e060049f16cc356f30afded645521c}} 
+\index{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}!Spawn\+Block@{Spawn\+Block}}
+\index{Spawn\+Block@{Spawn\+Block}!R\+P\+G2\+D\+::\+A\+P\+I\+::\+World@{R\+P\+G2\+D\+::\+A\+P\+I\+::\+World}}
+\subsubsection{\texorpdfstring{Spawn\+Block()}{SpawnBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void R\+P\+G2\+D.\+A\+P\+I.\+World.\+Spawn\+Block (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position,  }\item[{\mbox{\hyperlink{class_r_p_g2_d_1_1_base_classes_1_1_block}{Base\+Classes.\+Block}}}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Spawns a block at the position. (Creates a new instance) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em block} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+A\+P\+I/World.\+cs\end{DoxyCompactItemize}

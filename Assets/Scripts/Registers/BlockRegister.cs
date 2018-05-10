@@ -21,7 +21,7 @@ namespace RPG2D.Registers
 
         public static void RegisterBlockType(System.Type type, string name)
         {
-            _blockDictionary[name] = type;;
+            _blockDictionary[name] = type;
         }
 
         public static System.Type GetRegisteredBlockType(string name)

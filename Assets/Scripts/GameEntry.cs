@@ -13,8 +13,6 @@ namespace RPG2D {
 		// Use this for initialization
 		void Start ()
 		{
-			Debug.Log(RandomMath.NextPowerOf2(3));
-			
 			ModManager.LoadMods();
 			
 			TextureManager.PackAllTextures();
@@ -36,17 +34,37 @@ namespace RPG2D {
 			if (Input.GetMouseButton(0))
 			{
 				Vector3 mousePos = PlayerRegister.Player.GetCamera().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-				Debug.Log(mousePos);
-				Debug.Log(new Vector2Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y)));
-				World.SpawnBlock(new Vector2Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y)), Registers.BlockRegister.GetRegisteredBlockType ("TestMod-Wall"));
+				World.SpawnBlock(new Vector3Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y), 0), Registers.BlockRegister.GetRegisteredBlockType ("TestMod-Wall"));
 			}
 			
 			if (Input.GetMouseButton(1))
 			{
 				Vector3 mousePos = PlayerRegister.Player.GetCamera().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-				Debug.Log(mousePos);
-				Debug.Log(new Vector2Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y)));
-				World.SpawnBlock(new Vector2Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y)), typeof(Air));
+				World.SpawnBlock(new Vector3Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y), 0), typeof(Air));
+			}
+
+			if (Input.GetKeyDown(KeyCode.H))
+			{
+				Vector3 mousePos = PlayerRegister.Player.GetCamera().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+				World.SpawnBlock(new Vector3Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y), 1), Registers.BlockRegister.GetRegisteredBlockType ("TestMod-SandstoneFloor"));
+			}
+			
+			if (Input.GetKeyDown(KeyCode.Y))
+			{
+				Vector3 mousePos = PlayerRegister.Player.GetCamera().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+				World.SpawnBlock(new Vector3Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y), 1), Registers.BlockRegister.GetRegisteredBlockType ("TestMod-SpawnFloor"));
+			}
+			
+			if (Input.GetKeyDown(KeyCode.J))
+			{
+				Vector3 mousePos = PlayerRegister.Player.GetCamera().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+				World.SpawnBlock(new Vector3Int((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y), 1), typeof(Air));
+			}
+			
+			if (Input.GetKeyDown(KeyCode.K))
+			{
+				Vector3 mousePos = PlayerRegister.Player.GetCamera().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+				World.SpawnEntity(new Vector2((int)Math.Round(mousePos.x), (int)Math.Round(mousePos.y)),  Registers.EntityRegister.GetRegisteredEntityType("TestMod-TestBox"));
 			}
 		}
 	}

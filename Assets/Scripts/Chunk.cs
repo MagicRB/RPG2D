@@ -8,14 +8,14 @@ namespace RPG2D
 	[Serializable]
 	public class Chunk
 	{
-		private Dictionary<Vector2Int, RPG2D.BaseClasses.Block> _blocks = new Dictionary<Vector2Int, RPG2D.BaseClasses.Block>();
-
-		public Dictionary<Vector2Int, RPG2D.BaseClasses.Block> Blocks
+		private Dictionary<Vector3Int, RPG2D.BaseClasses.Block> _blocks = new Dictionary<Vector3Int, RPG2D.BaseClasses.Block>();
+		
+		public Dictionary<Vector3Int, RPG2D.BaseClasses.Block> Blocks
 		{
 			get { return _blocks; }
 		}
 		
-		public void SetBlockAt(Vector2Int position, BaseClasses.Block block)
+		public void SetBlockAt(Vector3Int position, BaseClasses.Block block)
 		{
 			_blocks[API.World.PositionToPositionInChunk(position)] = block;
 		}
@@ -31,7 +31,7 @@ namespace RPG2D
 			return blocks;
 		}
 		
-		public BaseClasses.Block GetBlockAt(Vector2Int position)
+		public BaseClasses.Block GetBlockAt(Vector3Int position)
 		{
 			if (!_blocks.ContainsKey(API.World.PositionToPositionInChunk(position)))
 				return new Air();
