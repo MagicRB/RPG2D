@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Magic_RB\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_RPG2D1.-893484974.00" t="ExcludeRecursive" />
+    <e p="F:\Projects\Unity\RPG2D" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets\Scripts" t="Include">
+        <e p="Air.cs" t="Include" />
+        <e p="API" t="Include">
+          <e p="AdjustedSprite.cs" t="Include" />
+          <e p="RandomHelperFunctions.cs" t="Include" />
+          <e p="RandomMath.cs" t="Include" />
+          <e p="World.cs" t="Include" />
+        </e>
+        <e p="BaseClasses" t="Include">
+          <e p="Block.cs" t="Include" />
+          <e p="Entity.cs" t="Include" />
+          <e p="Mod.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+        </e>
+        <e p="Chunk.cs" t="Include" />
+        <e p="GameEntry.cs" t="Include" />
+        <e p="Interfaces" t="Include">
+          <e p="IGameObjectHolder.cs" t="Include" />
+        </e>
+        <e p="Managers" t="Include">
+          <e p="ModManager.cs" t="Include" />
+          <e p="SaveManager.cs" t="Include" />
+          <e p="TextureManager.cs" t="Include" />
+        </e>
+        <e p="Registers" t="Include">
+          <e p="BlockRegister.cs" t="Include" />
+          <e p="EntityRegister.cs" t="Include" />
+          <e p="GameObjectRegister.cs" t="Include" />
+          <e p="PlayerRegister.cs" t="Include" />
+        </e>
+        <e p="SaveGame.cs" t="Include" />
+        <e p="SerializationSurrogates" t="Include">
+          <e p="Vector2IntSerializationSurrogate.cs" t="Include" />
+          <e p="Vector2SerializationSurrogate.cs" t="Include" />
+          <e p="Vector3IntSerializationSurrogate.cs" t="Include" />
+          <e p="Vector3SerializationSurrogate.cs" t="Include" />
+        </e>
+        <e p="TextureAtlas.cs" t="Include" />
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="RPG2D1.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Managers\TextureManager.cs" />
     <Compile Include="Assets\Scripts\Registers\BlockRegister.cs" />
     <Compile Include="Assets\Scripts\Registers\EntityRegister.cs" />
+    <Compile Include="Assets\Scripts\Registers\GameObjectRegister.cs" />
     <Compile Include="Assets\Scripts\Registers\PlayerRegister.cs" />
     <Compile Include="Assets\Scripts\SaveGame.cs" />
     <Compile Include="Assets\Scripts\SerializationSurrogates\Vector2IntSerializationSurrogate.cs" />
