@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using RPG2D.API;
+using RPG2D.BaseClasses;
 using RPG2D.Managers;
 using RPG2D.Registers;
 using UnityEngine;
@@ -16,9 +17,13 @@ namespace RPG2D {
 			ModManager.LoadMods();
 			
 			TextureManager.PackAllTextures();
-
-			SaveManager.Load();
 			
+			SaveManager.Load();
+
+			//BaseClasses.Player player = (BaseClasses.Player)Activator.CreateInstance(PlayerRegister.PlayerType);
+			//PlayerRegister.Player = player;
+			//player.Init();
+
 			/*World.SpawnBlock (new Vector2Int (-1, -1), Registers.BlockRegister.GetRegisteredBlockType ("TestMod-Wall"));
 			World.SpawnBlock (new Vector2Int (0, -1), Registers.BlockRegister.GetRegisteredBlockType ("TestMod-Wall"));
 			World.SpawnBlock (new Vector2Int (1, -1), Registers.BlockRegister.GetRegisteredBlockType ("TestMod-Wall"));*/

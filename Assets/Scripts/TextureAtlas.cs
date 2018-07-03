@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using RPG2D.API;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
@@ -57,6 +58,41 @@ namespace RPG2D
                 Debug.LogError("Texture not found on disk, path: " + file);
             }
         }
+        
+        /// <summary>
+        /// Adds a new texture into the atlas from a resource, the identifier is the name. 
+        /// </summary>
+        /// <param name="assembly"></param>
+        /// <param name="resource"></param>
+        /// <param name="name"></param>
+        public void AddTexture(Assembly assembly, string resource, string name)
+        {
+            Texture2D texture = null;
+            byte[] resourceData;
+
+            string formatedResourceName = assembly.GetName().Name + "." + resource.Replace(" ", "_")
+                                                                                  .Replace("\\", ".")
+                                                                                  .Replace("/", ".");
+            
+            using (Stream resourceStream = assembly.GetManifestResourceStream(formatedResourceName))
+            {
+                if (resourceStream == null) {
+                    Debug.LogError("Texture not found as resource, name: " + formatedResourceName);
+                    return;
+                }
+                
+                resourceData = new byte[resourceStream.Length];
+                
+                resourceStream.Read(resourceData, 0, resourceData.Length);
+                
+                texture = new Texture2D(2, 2);
+                texture.LoadImage(resourceData); //..this will auto-resize the texture dimensions.
+
+                _textures[name] = texture;
+                _textureIDs[name] = _textures.Count - 1;
+            }
+        }
+
         
         /// <summary>
         /// Gets the rect which is associated with texture name.
